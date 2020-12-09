@@ -37,34 +37,34 @@ for i in range(len(data)):
     emojixpress_normalized = data[i][1] / emojixpress_mean
     instagram_normalized = data[i][2] / instagram_mean
     twitter_normalized = data[i][3] / twitter_mean
-    index = emojixpress_normalized + instagram_normalized + twitter_normalized
-    data[i].append(index)
+    emosort = emojixpress_normalized + instagram_normalized + twitter_normalized
+    data[i].append(emosort)
  
 data.sort(key=lambda row: row[4], reverse=True)
  
-print('Название эмодзи| Emojixpress, млн')
-print('-----------------------------------')
+print('Название эмодзи|Emojixpress,млн')
+print('--------------------------------')
 for row in data[:5]:
     print('{: <16} | {: >16.2f}'.format(row[0], row[1]))
 print()
 print()
  
-print('Название эмодзи  | Instagram, млн')
-print('---------------------------------')
+print('Название эмодзи|Instagram, млн')
+print('------------------------------')
 for row in data[:5]:
     print('{: <16} | {: >14.2f}'.format(row[0], row[2]))
 print()
 print()
  
-print('Название эмодзи  | Твиттер, млн')
-print('-------------------------------')
+print('Название эмодзи|Твиттер, млн')
+print('----------------------------')
 for row in data[:5]:
     print('{: <16} | {: >12.2f}'.format(row[0], row[3]))
 print()
 print()
  
-print('Название эмодзи  | Индекс использования')
-print('---------------------------------------')
+print('Название эмодзи|Индекс использования')
+print('------------------------------------')
 for row in data[:5]:
     print('{: <16} | {: >20.2f}'.format(row[0], row[4]))
 print()
