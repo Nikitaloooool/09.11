@@ -56,9 +56,9 @@ twitter_sr2 = twitter_sr/len(data)
 
 print('Название приложения |Среднее значение')
 print('--------------------------------------')
-print(' EmojiXpress: {: >16.2f}'.format(emojixpress_sr1))
-print(' Instagram: {: >17.2f}'.format(instagram_sr1))
-print(' Твиттера: {: >20.2f}'.format(twitter_sr1))
+print(' EmojiXpress:       | {: >8.2f}'.format(emojixpress_sr1))
+print(' Instagram:         | {: >7.2f}'.format(instagram_sr1))
+print(' Твиттера:          | {: >9.2f}'.format(twitter_sr1))
 
 print('Название эмодзи|Emojixpress,млн')
 print('--------------------------------')
