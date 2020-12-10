@@ -21,22 +21,22 @@ data = [
     ['Переработка', 0.0333, 0.056, 932.0]
 ]
  
-sum_emojixpress = 0
-sum_instagram = 0
-sum_twitter = 0
+emojixpress_sr = 0
+instagram_sr = 0
+twitter_sr = 0
 for row in data:
-    sum_emojixpress += row[1]
-    sum_instagram += row[2]
-    sum_twitter += row[3]
+    emojixpress_sr += row[1]
+    instagram_sr += row[2]
+    twitter_sr += row[3]
  
-emojixpress_mean = sum_emojixpress / len(data)
-instagram_mean = sum_instagram/ len(data)
-twitter_mean = sum_twitter / len(data)
+emojixpress_sr1 = emojixpress_sr / len(data)
+instagram_sr1 =instagram_sr/ len(data)
+twitter_sr1 = twitter_sr / len(data)
  
 for i in range(len(data)):
-    emojixpress_normalized = data[i][1] / emojixpress_mean
-    instagram_normalized = data[i][2] / instagram_mean
-    twitter_normalized = data[i][3] / twitter_mean
+    emojixpress_normalized = data[i][1] / emojixpress_sr1
+    instagram_normalized = data[i][2] / instagram_sr1
+    twitter_normalized = data[i][3] / twitter_sr1
     emosort = emojixpress_normalized + instagram_normalized + twitter_normalized
     data[i].append(emosort)
  
