@@ -1,0 +1,37 @@
+#0 задание Выведите на экран размеры таблицы датасета Cholera
+import pandas as pd
+df= pd.read_csv('cholera.csv')
+df.shape
+print(df)
+
+#1 задание Вывести на экран последние 10 строк датасета Cholera
+import pandas as pd
+df = pd.read_csv('cholera.csv')
+df.tail(10) # последние 10 строк
+print(df)
+#2 задание  Вывести на экран первые 5 строк датасета Cholera
+import pandas as pd
+df = pd.read_csv('cholera.csv')
+df.head(5) # первые 5 строк
+print(df)
+#3 задание В датасеrе cholera. csv вывести стобцы(все вместе отвечіющие за следующие параметры: Регион, Страна, общее число случаев.
+import pandas as pd
+df= pd.read_csv('cholera.csv')
+df.columns
+mass=df.loc[:,['region','country','total_cases']]
+print(mass)
+
+#4 задание  Сделайе срез таблицы с 3 до 12 строки
+import pandas as pd
+df = pd.read_csv('cholera.csv')
+df.columns
+df.loc.loc[3:12]
+print(df)
+
+#5 задание Вывести число стран, в которых количество летальных исходов больше 50 
+import pandas as pd
+df= pd.read_csv('cholera.csv')
+cases=df.loc[:,['total_cases']]
+current_cases =  df.loc[df.loc[:,'total_cases'] >50]['total_cases'].count()
+print(current_cases)
+
