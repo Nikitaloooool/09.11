@@ -25,7 +25,7 @@ print(mass)
 import pandas as pd
 df = pd.read_csv('cholera.csv')
 df.columns
-df.loc.loc[3:12]
+df.loc[3:12]
 print(df)
 
 #5 задание Вывести число стран, в которых количество летальных исходов больше 50 
