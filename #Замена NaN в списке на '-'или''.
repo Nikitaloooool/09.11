@@ -1,0 +1,12 @@
+#Замена NaN в списке на '-'или''.
+import pandas as pd
+pd.read_csv('c.csv', encoding = 'cp1251', delimiter= ';')
+df['Результаты поискового запроса'] = df['Результаты поискового запроса'].fillna('-')
+df['Unnamed: 1'] = df['Unnamed: 1'].fillna('-')
+df['Unnamed: 2'] = df['Unnamed: 2'].fillna('-')
+df['Unnamed: 3'] = df['Unnamed: 3'].fillna('-')
+df['Unnamed: 4'] = df['Unnamed: 4'].fillna('-')
+df['Unnamed: 5'] = df['Unnamed: 5'].fillna('-')
+df['Unnamed: 6'] = df['Unnamed: 6'].fillna('-')
+df['Unnamed: 7'] = df['Unnamed: 7'].fillna('-')
+print(df)
