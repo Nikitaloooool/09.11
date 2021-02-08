@@ -1,0 +1,14 @@
+import csv
+
+with open('c.csv') as f:
+    incl_col = [5]                          
+    new_csv = []                             
+    reader = csv.reader(f, delimiter=";")
+    for row in reader:
+        col = list(row[i] for i in incl_col)
+        print(col)                            
+        new_csv.append(col)                   
+
+with open('new.csv') as f:         
+    writer = csv.writer(f, delimiter=";")
+    writer.writerows(new_csv)
